@@ -17,25 +17,29 @@ body {
 
 .kalkulator-screen {
     width: 100%;
-    min-height: 120px;
+    min-height: 100px; /* Tinggi minimum */
     border: none;
     border-radius: 10px 10px 0 0;
-    background-color: #d9d6d6;
+    background-color: #eaeaea;
     text-align: right;
-    font-size: 3.5em;
+    font-size: 3.5em; /* Ukuran font besar */
     padding: 10px;
     box-sizing: border-box;
-    
+    overflow-wrap: break-word; /* Memungkinkan pemutusan kata */
+    word-break: break-all; /* Memastikan teks diputus tanpa batas kata */
+    white-space: normal; /* Mengizinkan pemutusan baris */
+    overflow-y: auto; /* Scroll vertikal jika konten melebihi tinggi */
+    max-height: 150px; /* Tinggi maksimum untuk layar kalkulator */
 }
 
 .kalkulator-keys {
-    padding: 8px;
+    padding: 10px;
 }
 
 .rows {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 .row {
@@ -44,33 +48,29 @@ body {
 }
 
 button {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border: none;
     border-radius: 10px;
     background-color: #f0f0f0;
-    font-size: 1.7em;
+    font-size: 1.5em;
     cursor: pointer;
     transition: background-color 0.3s;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
 }
 
 .all-clear {
-    width: 160px; 
+    width: 120px; 
 }
 
 #zero-btn {
-    width: 160px; 
+    width: 200px; 
 }
 
 button:hover {
     background-color: darkgrey;
 }
 
-.operator {
+.operator, .backspace, .negative-positive, .square-root, .square {
     background-color: #ff9500;
     color: white;
 }
